@@ -1,0 +1,23 @@
+@import "@/styles/animations";
+@import "@/styles/colors";
+
+.terminal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 1em;
+  font-size: 2em;
+  text-transform: uppercase;
+  animation: textShadow 4s infinite;
+
+  .accesGranted {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid $clr-main;
+    padding: 0.5em 2em;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+}

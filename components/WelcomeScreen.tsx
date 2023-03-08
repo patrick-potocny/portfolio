@@ -1,7 +1,50 @@
-import React from 'react'
+import React, { useRef, useState } from "react";
+import styles from "@/styles/components/WelcomeScreen.module.scss";
+import { VT323 } from "next/font/google";
+import { TypeAnimation } from "react-type-animation";
+import MatrixRain from "./MatrixRain";
 
-export default function WelcomeScreen() {
+const vt323 = VT323({ subsets: ["latin"], display: "swap", weight: "400" });
+
+export default function WelcomeScreen({
+  setShowWelcomeScreen,
+}: {
+  setShowWelcomeScreen: (show: boolean) => void;
+}) {
+  const [showAccessGranted, setShowAccessGranted] = useState(false);
+  const [showMatrixRain, setShowMatrixRain] = useState(false);
+
   return (
-    <div>WelcomeScreen</div>
-  )
+    <>
+      <div className={`${styles.terminal} ${vt323.className}`}>
+        <TypeAnimation sequence={[1000, "Hello there..."]} cursor={false} />
+        <TypeAnimation
+          sequence={[2500, "I've been expecting You..."]}
+          cursor={false}
+        />
+        <TypeAnimation
+          sequence={[
+            4700,
+            "3",
+            800,
+            "2",
+            800,
+            "1",
+            500,
+            "",
+            () => setShowAccessGranted(true),
+            500,
+            () => setShowMatrixRain(true),
+            2500,
+            () => setShowWelcomeScreen(false),
+          ]}
+          cursor={false}
+        />
+        {showAccessGranted && (
+          <p className={styles.accesGranted}>ACCESS GRANTED</p>
+        )}
+      </div>
+      {showMatrixRain && <MatrixRain />}
+    </>
+  );
 }
