@@ -1,0 +1,91 @@
+@import "@/styles/colors";
+@import "@/styles/mixins";
+@import "@/styles/animations";
+
+.header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 2em;
+  font-size: 2em;
+
+  .nav {
+    .navList {
+      display: flex;
+      gap: 2em;
+
+      li {
+        position: relative;
+        background-color: darken($clr-bg, 4%);
+        padding-inline: 0.2em;
+      }
+
+      li:not(.selected) {
+        @include btn-hover {
+          font-weight: bold;
+          animation: btnHoverGlitch 0.1s;
+        }
+      }
+
+      .selected {
+        pointer-events: none;
+
+        &::before {
+          content: " ";
+          position: absolute;
+          top: 0.54em;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 120%;
+          height: 1.01em;
+          border: 2px solid $clr-main;
+          border-bottom: none;
+          background-color: darken($clr-bg, 3%);
+          z-index: -1;
+        }
+      }
+    }
+  }
+}
+
+.headerUnderline {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background-color: $clr-main;
+  z-index: -10;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -1em;
+    border-left: 2px solid $clr-main;
+    height: 1em;
+    width: 1px;
+    left: 0;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -1em;
+    border-left: 2px solid $clr-main;
+    height: 1em;
+    width: 1px;
+    right: 0;
+  }
+}
+
+@media (max-width: 63em) {
+  .header {
+    padding-inline: .5em;
+  }
+
+  .headerUnderline {
+    margin-top: -1em;
+  }
+
+  .nav {
+    display: none;
+  }
+}

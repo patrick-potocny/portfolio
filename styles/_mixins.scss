@@ -1,0 +1,7 @@
+@mixin btn-hover {
+  transition: ease-out 0.1s;
+  &:hover {
+    @content;
+    cursor: pointer;
+  }
+}

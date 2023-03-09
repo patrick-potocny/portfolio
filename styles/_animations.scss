@@ -1,3 +1,30 @@
+@keyframes btnHoverGlitch {
+  0% {
+    opacity: 0;
+    transform: translateX(10px);
+  }
+
+  25% {
+    opacity: 1;
+    transform: translateX(-10px);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateX(-10px);
+  }
+
+  75% {
+    opacity: 1;
+    transform: translateX(5px);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(15px);
+  }
+}
+
 @keyframes scanline {
 	0% {
 		bottom: 100%;

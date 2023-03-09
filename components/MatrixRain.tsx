@@ -70,7 +70,7 @@ function RainStream({ height }: { height: number }) {
     <div
       className={matrixFont.className}
       style={{
-        color: "#20c20e",
+        color: "#1bff80",
         writingMode: "vertical-rl",
         textOrientation: "upright",
         userSelect: "none",
@@ -84,8 +84,8 @@ function RainStream({ height }: { height: number }) {
     >
       {stream.map((char, index) => (
         <a
+          key={index}
           style={{
-            // backgroundColor: "rgba(0, 0, 0, 0.3)",
             marginTop: -12,
             // Reduce opacity for last chars
             opacity: index < 6 ? 0.1 + index * 0.15 : 1,

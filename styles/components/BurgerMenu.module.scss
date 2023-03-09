@@ -1,0 +1,55 @@
+@import "@/styles/colors";
+@import "@/styles/mixins";
+@import "@/styles/animations";
+
+.burgerMenu {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-inline: 0.5em;
+  background-color: darken($clr-bg, 5%);
+
+  .menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 7em;
+    background-color: $clr-sec;
+
+    .menuList {
+      display: flex;
+      flex-direction: column;
+      text-align: right;
+
+      .menuItem {
+        margin: 0.2em 0.7em;
+        padding-right: 1em;
+
+        &.selected,
+        &:hover {
+          position: relative;
+          color: $clr-bg;
+          background-color: $clr-main;
+
+          &::after {
+            content: " ";
+            position: absolute;
+            top: 50%;
+            right: 5%;
+            transform: translateY(-50%);
+            width: 0.4em;
+            height: 0.4em;
+            background-color: $clr-bg;
+            z-index: 10;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 63em) {
+  .burgerMenu {
+    display: none;
+  }
+}

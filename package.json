@@ -16,13 +16,16 @@
     "eslint": "8.35.0",
     "eslint-config-next": "13.2.3",
     "framer-motion": "^10.2.3",
+    "hamburger-react": "^2.5.0",
     "next": "13.2.3",
     "react": "18.2.0",
+    "react-copy-to-clipboard": "^5.1.0",
     "react-dom": "18.2.0",
     "react-type-animation": "^2.1.2",
     "typescript": "4.9.5"
   },
   "devDependencies": {
+    "@types/react-copy-to-clipboard": "^5.0.4",
     "sass": "^1.58.3"
   }
 }

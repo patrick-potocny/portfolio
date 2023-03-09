@@ -1,6 +1,7 @@
 import WelcomeScreen from "@/components/WelcomeScreen";
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import Layout from "@/components/Layout";
 
 export default function Home() {
   const [showWelcomeScreen, setShowWelcomeScreen] = useState(true);
@@ -16,16 +17,14 @@ export default function Home() {
               y: [0, 10, 5, -5, 0, 10, -20, 5],
               opacity: [1, 0, 1, 0, 1, 0, 1, 0],
             }}
-            transition={{ duration: .2, type: "keyframes"}}
+            transition={{ duration: 0.2, type: "keyframes" }}
             onAnimationComplete={() => setShowMainContent(true)}
           >
             <WelcomeScreen setShowWelcomeScreen={setShowWelcomeScreen} />
           </motion.div>
         )}
       </AnimatePresence>
-      {showMainContent && (
-        <div style={{ textAlign: "center", padding: "2em" }}>TODO</div>
-      )}
+      {showMainContent && <Layout>Content</Layout>}
     </>
   );
 }
