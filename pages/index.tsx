@@ -24,7 +24,7 @@ export default function Home() {
           </motion.div>
         )}
       </AnimatePresence>
-      {showMainContent && <Layout>Content</Layout>}
+      {showMainContent && <Layout>.</Layout>}
     </>
   );
 }

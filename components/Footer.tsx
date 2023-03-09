@@ -23,7 +23,7 @@ export default function Footer() {
     setCopied(true);
     setTimeout(() => {
       setCopied(false);
-    }, 3000);
+    }, 2500);
   }
 
   return (
@@ -86,7 +86,7 @@ export default function Footer() {
           </button>
         </CopyToClipboard>
         <a
-          href="../public/files/dummy.pdf"
+          href="/files/dummy.pdf"
           target="_blank"
           className={styles.link}
           onMouseEnter={() => setResumeIcon(resumeHover)}
