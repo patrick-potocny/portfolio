@@ -7,9 +7,9 @@ import MatrixRain from "./MatrixRain";
 const vt323 = VT323({ subsets: ["latin"], display: "swap", weight: "400" });
 
 export default function WelcomeScreen({
-  setShowWelcomeScreen,
+  setSeenWelcomePage,
 }: {
-  setShowWelcomeScreen: (show: boolean) => void;
+  setSeenWelcomePage: (show: boolean) => void;
 }) {
   const [showAccessGranted, setShowAccessGranted] = useState(false);
   const [showMatrixRain, setShowMatrixRain] = useState(false);
@@ -25,18 +25,11 @@ export default function WelcomeScreen({
         <TypeAnimation
           sequence={[
             4700,
-            "3",
-            800,
-            "2",
-            800,
-            "1",
-            500,
-            "",
             () => setShowAccessGranted(true),
             500,
             () => setShowMatrixRain(true),
             2500,
-            () => setShowWelcomeScreen(false),
+            () => setSeenWelcomePage(true),
           ]}
           cursor={false}
         />

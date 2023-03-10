@@ -20,6 +20,7 @@ export default function BurgerMenu({ currentPage }: { currentPage: string }) {
       <AnimatePresence>
         {open && (
           <motion.nav
+            key={"burgerMenu"}
             initial={{ opacity: 0, scale: 0, y: 0 }}
             animate={{
               opacity: [1, 0, 1, 0, 1, 0, 1, 0, 1],

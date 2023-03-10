@@ -2,6 +2,6 @@
   transition: ease-out 0.1s;
   &:hover {
     @content;
-    cursor: pointer;
+    cursor: url("./cursors/pointer.png"), url("./cursors/pointer.cur"), pointer;
   }
 }
