@@ -1,0 +1,59 @@
+@import "@/styles/colors";
+@import "@/styles/mixins";
+
+.heroContainer {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  .hero {
+    flex: 0 0 48em;
+
+    .title {
+      font-size: 2em;
+      font-weight: 400;
+      letter-spacing: 1px;
+
+      .job {
+        font-size: 1.5em;
+        text-transform: uppercase;
+        font-weight: 600;
+        margin-left: 0.3em;
+      }
+
+      .stopLooking {
+        margin-left: 1em;
+      }
+    }
+
+    .introduction {
+      border-left: 2px solid $clr-main;
+      padding-left: 1em;
+      margin-left: 1.5em;
+      margin-block: 2em;
+      font-size: 1.5em;
+      max-width: 30em;
+      line-height: 1.3;
+
+      .firstWord {
+        font-size: 2em;
+      }
+
+      .link {
+        border: 2px dashed $clr-main;
+        padding: 0.1em 0.3em;
+
+        @include btn-hover {
+          color: $clr-bg;
+          background-color: $clr-main;
+        }
+      }
+    }
+  }
+
+  .right {
+    max-width: 45em;
+    flex: 1;
+  }
+}
