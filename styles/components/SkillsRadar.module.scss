@@ -1,15 +1,18 @@
 @import "@/styles/colors";
+@import "@/styles/animations";
 
 .title {
+  display: none;
+  text-align: center;
   font-size: 2em;
-  text-align: right;
-  transform: translateY(2em);
+  margin-bottom: 1em;
 }
 
 .panel {
-  box-shadow: inset 0 0 0 99px $clr-bg, inset 0 0 0 100px rgba($clr-main, 0.2),
-    inset 0 0 0 199px $clr-bg, inset 0 0 0 200px rgba($clr-main, 0.2),
-    inset 0 0 0 299px $clr-bg, inset 0 0 0 300px rgba($clr-main, 0.2);
+  box-shadow: inset 0 0 0 6.1875em $clr-bg,
+    inset 0 0 0 6.25em rgba($clr-main, 0.2), inset 0 0 0 12.4375em $clr-bg,
+    inset 0 0 0 12.5em rgba($clr-main, 0.2), inset 0 0 0 18.6875em $clr-bg,
+    inset 0 0 0 18.75em rgba($clr-main, 0.2);
   border-radius: 50%;
   transform: rotate(0deg);
   overflow: hidden;
@@ -29,8 +32,8 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 800px;
-    height: 800px;
+    width: 100%;
+    height: 100%;
     border-left: 1px solid rgba($clr-main, 0.1);
   }
 
@@ -57,7 +60,7 @@
   }
 
   .items {
-    font-size: 1.5em;
+    font-size: 24px;
 
     li {
       animation: target 6s infinite linear;
@@ -94,9 +97,9 @@
       }
 
       &:nth-child(6) {
-        animation-delay: 500ms;
-        top: 80%;
-        left: 50%;
+        animation-delay: 200ms;
+        top: 75%;
+        left: 60%;
       }
 
       &:nth-child(7) {
@@ -106,28 +109,41 @@
       }
 
       &:nth-child(8) {
-        animation-delay: 500ms;
+        animation-delay: 2200ms;
         top: 42%;
         left: 12%;
+      }
+
+      &:nth-child(9) {
+        animation-delay: 800ms;
+        top: 87%;
+        left: 40%;
       }
     }
   }
 }
 
-@keyframes scanning {
-  100% {
-    transform: rotate(360deg);
+@media (max-width: 28em) {
+  .panel {
+    .items {
+      font-size: 16px;
+    }
   }
 }
 
-@keyframes target {
-  1% {
-    opacity: 0.5;
+@media (max-width: 97em) {
+  .panel {
+    font-size: 0.55em;
+    font-size: clamp(0.55em, -1.0785714285714283em + 2.1428571428571423vw, 1em);
   }
-  3% {
-    opacity: 1;
+}
+
+@media (max-width: 75em) {
+  .title {
+    display: block;
   }
-  90% {
-    opacity: 0;
+  .panel {
+    font-size: 0.3rem;
+    font-size: clamp(0.3rem, 0.0625rem + 1.25vw, 1rem);
   }
 }

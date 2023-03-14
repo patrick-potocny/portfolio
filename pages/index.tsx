@@ -4,14 +4,16 @@ import { AnimatePresence, motion } from "framer-motion";
 import Layout from "@/components/Layout";
 import { SeenWelcomeScreenCtx } from "@/context/SeenWelcomePageCtx";
 import styles from "@/styles/pages/Home.module.scss";
-import Image from "next/image";
-import boyReading from "../public/images/boyComputer.png";
 import Link from "next/link";
 import SkillsRadar from "@/components/SkillsRadar";
 
 // Shows the welcome screen only when user first visits the site or refreshes
 // the page. Otherwise, it shows the homepage.
-export default function Home() {
+export default function Home({
+  scrollToBottom,
+}: {
+  scrollToBottom: () => void;
+}) {
   const { seenWelcomePage, setSeenWelcomePage } =
     useContext(SeenWelcomeScreenCtx);
 
@@ -34,11 +36,11 @@ export default function Home() {
           <Layout>
             <div className={styles.heroContainer}>
               <section className={styles.hero}>
-                {/* <h1 className={styles.title}>Transforming ideas<br/>into digital realities</h1> */}
                 <h1 className={styles.title}>
                   Looking for a <br />
                   <span className={styles.job}>
-                    talented Front-End Developer ?
+                    <span className={styles.talented}>talented</span> Front-End
+                    Developer ?
                   </span>
                   <br />
                   <span className={styles.stopLooking}>Look no further!</span>
@@ -51,22 +53,23 @@ export default function Home() {
                   always looking for new challenges and opportunities to improve
                   my skills.
                 </p>
-                <p className={styles.introduction}>
+                <p className={styles.link}>
                   To back up my claims, here are my most recent{" "}
-                  <Link href="/projects" className={styles.link}>
+                  <Link href="/projects" className={styles.linkBtn}>
                     PROJECTS
                   </Link>
                 </p>
-                <p className={styles.introduction}>
-                  Want to learn more?{" "}
-                  <Link href="/about" className={styles.link}>
+                <p className={styles.link}>
+                  Want to learn more{" "}
+                  <Link href="/about" className={styles.linkBtn}>
                     ABOUT ME
-                  </Link>
+                  </Link>{" "}
+                  ?
                 </p>
               </section>
-                <section className={styles.right}>
-                  <SkillsRadar />
-                </section>
+              <section className={styles.right}>
+                <SkillsRadar />
+              </section>
             </div>
           </Layout>
         )}

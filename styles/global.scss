@@ -15,7 +15,8 @@ body {
   background-image: radial-gradient(ellipse, $clr-bg 0%, black 150%);
   background-repeat: no-repeat;
   background-attachment: fixed;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   color: $clr-main;
   padding: 0 1em;
 
@@ -55,5 +56,12 @@ body {
     bottom: 100%;
     pointer-events: none;
     animation: scanline 10s linear infinite;
+  }
+}
+
+@media (max-width: 63em) {
+  body {
+    margin-left: .2em;
+    padding: 0 .2em;
   }
 }

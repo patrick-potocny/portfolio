@@ -1,11 +1,39 @@
+@import "@/styles/colors";
+
 .container {
+  max-width: 120em;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   height: 100vh;
 
   .main {
     flex-grow: 1;
-    padding: 0.5em 1em;
+    margin: 1.5em 0 .3em .5em;
     overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      width: .5em;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: $clr-sec;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: rgba($clr-main, 0.5);
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: $clr-main;
+    }
+  }
+}
+
+@media (min-width: 75em) {
+  .container {
+    .main {
+      margin-inline: 2em;
+    }
   }
 }
