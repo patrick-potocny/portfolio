@@ -15,8 +15,7 @@ body {
   background-image: radial-gradient(ellipse, $clr-bg 0%, black 150%);
   background-repeat: no-repeat;
   background-attachment: fixed;
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow: hidden;
   color: $clr-main;
   padding: 0 1em;
 
@@ -61,7 +60,15 @@ body {
 
 @media (max-width: 63em) {
   body {
-    margin-left: .2em;
-    padding: 0 .2em;
+    margin-left: 0.2em;
+    padding: 0 0.2em;
+  }
+}
+
+// Make scrolling possible on mobile when address bar is shown
+@media (max-width: 50em) {
+  body {
+    overflow-x: hidden;
+    overflow-y: auto;
   }
 }

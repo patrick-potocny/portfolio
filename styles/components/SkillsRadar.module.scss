@@ -4,8 +4,9 @@
 .title {
   display: none;
   text-align: center;
-  font-size: 2em;
-  margin-bottom: 1em;
+  font-size: 3em;
+  margin-bottom: 0.5em;
+  opacity: 0.6;
 }
 
 .panel {
@@ -133,8 +134,12 @@
 
 @media (max-width: 97em) {
   .panel {
-    font-size: 0.55em;
-    font-size: clamp(0.55em, -1.0785714285714283em + 2.1428571428571423vw, 1em);
+    font-size: 0.4rem;
+    font-size: clamp(
+      0.4rem,
+      -1.2666666666666666rem + 2.222222222222222vw,
+      1rem
+    );
   }
 }
 

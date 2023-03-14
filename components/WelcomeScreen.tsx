@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import styles from "@/styles/components/WelcomeScreen.module.scss";
 import { VT323 } from "next/font/google";
 import { TypeAnimation } from "react-type-animation";

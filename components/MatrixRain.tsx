@@ -20,14 +20,16 @@ function getRandInRange(min: number, max: number) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
-const getRandChar = () =>
-  VALID_CHARS.charAt(Math.floor(Math.random() * VALID_CHARS.length));
+function getRandChar() {
+  return VALID_CHARS.charAt(Math.floor(Math.random() * VALID_CHARS.length));
+}
 
 function getRandStream() {
   return new Array(getRandInRange(MIN_STREAM_SIZE, MAX_STREAM_SIZE))
     .fill(undefined)
     .map((_) => getRandChar());
 }
+
 function getMutatedStream(stream: string[]) {
   const newStream = [];
   for (let i = 1; i < stream.length; i++) {

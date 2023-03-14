@@ -11,6 +11,7 @@ import resumeHover from "@/public/images/resumeHover.svg";
 import Image from "next/image";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { AnimatePresence, motion } from "framer-motion";
+import { glitchAnimation } from "@/lib/utils";
 
 export default function Footer() {
   const [linkedInIcon, setLinkedInIcon] = useState(linkedIn);
@@ -67,16 +68,8 @@ export default function Footer() {
                 <motion.div
                   key="copied"
                   initial={{ opacity: 0, y: -10 }}
-                  animate={{
-                    opacity: [1, 0, 1, 0, 1, 0, 1, 0, 1],
-                    y: [0, 10, 5, -5, 0, 10, -20, 10, 0],
-                    x: [0, 10, 5, -5, 0, 10, -20, 10, 0],
-                  }}
-                  exit={{
-                    opacity: [1, 0, 1, 0, 1, 0, 1, 0, 1],
-                    y: [0, 10, 5, -5, 0, 10, -20, 10, 0],
-                    x: [0, 10, 5, -5, 0, 10, -20, 10, 0],
-                  }}
+                  animate={glitchAnimation}
+                  exit={glitchAnimation}
                   transition={{ duration: 0.2 }}
                   className={styles.copied}
                 >
