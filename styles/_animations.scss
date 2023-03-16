@@ -25,19 +25,6 @@
   }
 }
 
-// Cursor blinking effect
-@keyframes blink {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
 @keyframes scanline {
 	0% {
 		bottom: 100%;
@@ -50,7 +37,7 @@
 	}
 }
 
-// Text glitching effect
+// Text glitching effect on welcome screen
 @keyframes textShadow {
 	0% {
 		text-shadow: 0.4389924193300864px 0 1px rgba(0, 30, 255, 0.5),
@@ -159,12 +146,14 @@
 	}
 }
 
+// Radar scanline
 @keyframes scanning {
   100% {
     transform: rotate(360deg);
   }
 }
 
+// Radar target animation
 @keyframes target {
   1% {
     opacity: 0.5;

@@ -6,7 +6,7 @@ import { useState } from "react";
 import { SeenWelcomeScreenCtx } from "@/context/SeenWelcomePageCtx";
 import { glitchAnimation } from "@/lib/utils";
 
-const mainFont = localFont({ src: "../public/fonts/monofonto.ttf" });
+const mainFont = localFont({ src: "../public/fonts/monofonto.ttf", display: "swap"});
 
 export default function App({ Component, pageProps }: AppProps) {
   const [seenWelcomePage, setSeenWelcomePage] = useState(false);

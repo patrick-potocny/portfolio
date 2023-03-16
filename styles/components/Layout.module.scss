@@ -9,7 +9,7 @@
 
   .main {
     flex-grow: 1;
-    margin: 1.5em 0 .3em .5em;
+    margin: 1.5em 0 .3em 0;
     overflow-y: auto;
 
     &::-webkit-scrollbar {
@@ -26,14 +26,6 @@
 
     &::-webkit-scrollbar-thumb:hover {
       background: $clr-main;
-    }
-  }
-}
-
-@media (min-width: 75em) {
-  .container {
-    .main {
-      margin-inline: 2em;
     }
   }
 }

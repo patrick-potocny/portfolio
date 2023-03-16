@@ -1,6 +1,6 @@
 import WelcomeScreen from "@/components/WelcomeScreen";
-import React, { useContext, useEffect, useState } from "react";
-import { AnimatePresence, motion, useAnimation } from "framer-motion";
+import React, { useContext, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import Layout from "@/components/Layout";
 import { SeenWelcomeScreenCtx } from "@/context/SeenWelcomePageCtx";
 import styles from "@/styles/pages/Home.module.scss";
@@ -88,7 +88,7 @@ export default function Home() {
                 </motion.p>
                 <motion.p
                   {...commonProps}
-                  transition={{ duration: 1 }}
+                  transition={{ duration: 1, delay: 0.3 }}
                   className={styles.link}
                 >
                   To back up my claims, here are my most recent{" "}
@@ -98,19 +98,19 @@ export default function Home() {
                 </motion.p>
                 <motion.p
                   {...commonProps}
-                  transition={{ duration: 1 }}
+                  transition={{ duration: 1, delay: 0.7 }}
                   className={styles.link}
                 >
-                  Want to learn more{" "}
+                  Learn more{" "}
                   <Link href="/about" className={styles.linkBtn}>
                     ABOUT ME
-                  </Link>{" "}
-                  ?
+                  </Link>
                 </motion.p>
               </section>
               <motion.section
                 {...commonProps}
-                transition={{ duration: 1, delay: 0.5 }}
+                initial={{ y: 0 }}
+                transition={{ duration: 1, delay: 1.2 }}
                 className={styles.right}
               >
                 <SkillsRadar />

@@ -81,13 +81,13 @@
 
       &:nth-child(3) {
         animation-delay: 5600ms;
-        top: 60%;
-        left: 60%;
+        top: 58%;
+        left: 55%;
       }
 
       &:nth-child(4) {
-        animation-delay: 1500ms;
-        top: 60%;
+        animation-delay: 1200ms;
+        top: 70%;
         left: 20%;
       }
 
@@ -126,6 +126,7 @@
 
 @media (max-width: 28em) {
   .panel {
+    margin-bottom: 5em;
     .items {
       font-size: 16px;
     }

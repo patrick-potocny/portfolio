@@ -15,6 +15,7 @@
     right: 0;
     width: 7em;
     background-color: $clr-sec;
+    z-index: 70;
 
     .menuList {
       display: flex;
@@ -22,7 +23,7 @@
       text-align: right;
 
       .menuItem {
-        margin: 0.2em 0.7em;
+        margin: 0.2em 0.2em 0.2em 1em;
         padding-right: 1em;
 
         &.selected,
