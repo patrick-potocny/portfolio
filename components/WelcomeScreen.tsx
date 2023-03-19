@@ -19,7 +19,7 @@ export default function WelcomeScreen({
       <div className={`${styles.terminal} ${vt323.className}`}>
         <TypeAnimation sequence={[1000, "Hello there..."]} cursor={false} />
         <TypeAnimation
-          sequence={[2500, "I've been expecting You..."]}
+          sequence={[2500, "I've been expecting You"]}
           cursor={false}
         />
         <TypeAnimation

@@ -13,7 +13,7 @@ export default function Header() {
   return (
     <>
       <header className={styles.header}>
-        <p>LOGO</p>
+        <Link href="/" className={styles.logo}>&lt;/patrikp&gt;</Link>
         <nav className={styles.nav}>
           <ul className={styles.navList}>
             <li className={currentPage === "" ? styles.selected : ""}>

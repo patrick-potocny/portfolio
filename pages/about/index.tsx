@@ -1,5 +1,6 @@
 import Layout from "@/components/Layout";
 import { SeenWelcomeScreenCtx } from "@/context/SeenWelcomePageCtx";
+import Head from "next/head";
 import React, { useContext, useEffect } from "react";
 
 export default function About() {
@@ -13,6 +14,9 @@ export default function About() {
 
   return (
     <Layout>
+      <Head>
+        <title>About</title>
+      </Head>
       <h1>About</h1>
     </Layout>
   );

@@ -102,8 +102,10 @@
       padding: 0.2em 1em;
     }
 
-    .technology:not(:first-child) {
-      border-left: 1px solid $clr-main;
+    .technology {
+      border: 1px solid $clr-main;
+      border-bottom: none;
+      border-top: none;
     }
   }
 }

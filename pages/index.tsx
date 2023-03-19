@@ -8,6 +8,7 @@ import Link from "next/link";
 import SkillsRadar from "@/components/SkillsRadar";
 import Typewriter from "@/components/Typewriter";
 import { glitchAnimation } from "@/lib/utils";
+import Head from "next/head";
 
 // Shows the welcome screen only when user first visits the site or refreshes
 // the page. Otherwise, it shows the homepage.
@@ -27,6 +28,9 @@ export default function Home() {
 
   return (
     <>
+      <Head>
+        <title>&lt;/patrikp&gt;</title>
+      </Head>
       <AnimatePresence initial={false} mode="wait">
         {!seenWelcomePage ? (
           <motion.div

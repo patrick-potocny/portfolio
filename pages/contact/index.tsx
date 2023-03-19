@@ -1,5 +1,6 @@
 import Layout from "@/components/Layout";
 import { SeenWelcomeScreenCtx } from "@/context/SeenWelcomePageCtx";
+import Head from "next/head";
 import React, { useContext, useEffect } from "react";
 
 export default function Contact() {
@@ -13,6 +14,9 @@ export default function Contact() {
 
   return (
     <Layout>
+      <Head>
+        <title>Contact</title>
+      </Head>
       <h1>COntact</h1>
     </Layout>
   );

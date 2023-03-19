@@ -12,6 +12,7 @@ import gitHub from "@/public/images/gitHub.svg";
 import gitHubHover from "@/public/images/gitHubHover.svg";
 import link from "@/public/images/link.svg";
 import linkHover from "@/public/images/linkHover.svg";
+import Head from "next/head";
 
 type Props = {
   frontmatter: Frontmatter;
@@ -63,6 +64,9 @@ export default function ProjectPage({ frontmatter, content }: Props) {
 
   return (
     <Layout>
+      <Head>
+        <title>{frontmatter.title}</title>
+      </Head>
       <article className={styles.project}>
         <div className={styles.leftCorners} />
         <div className={styles.rightCorners} />
@@ -125,6 +129,34 @@ export default function ProjectPage({ frontmatter, content }: Props) {
             {content}
           </ReactMarkdown>
         </main>
+        <footer>
+        <div className={styles.links}>
+            <a
+              className={styles.link}
+              href={frontmatter.siteUrl}
+              target="_blank"
+              onMouseEnter={() => setLinkIcon(linkHover)}
+              onMouseLeave={() => setLinkIcon(link)}
+            >
+              <Image className={styles.icon} src={linkIcon} alt="Link icon" />
+              SITE
+            </a>
+            <a
+              className={styles.link}
+              href={frontmatter.codeUrl}
+              target="_blank"
+              onMouseEnter={() => setGitHubIcon(gitHubHover)}
+              onMouseLeave={() => setGitHubIcon(gitHub)}
+            >
+              <Image
+                className={styles.icon}
+                src={gitHubIcon}
+                alt="Github logo"
+              />
+              CODE
+            </a>
+          </div>
+        </footer>
       </article>
     </Layout>
   );

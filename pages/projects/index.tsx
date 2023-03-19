@@ -5,6 +5,7 @@ import fs from "fs";
 import matter from "gray-matter";
 import ProjectWrapper from "@/components/ProjectWrapper";
 import { Frontmatter } from "@/lib/types";
+import Head from "next/head";
 
 type Project = {
   slug: string;
@@ -46,6 +47,9 @@ export default function Projects({ projects }: ProjectsProps) {
 
   return (
     <Layout>
+      <Head>
+        <title>Projects</title>
+      </Head>
       {projects.map(({ slug, frontmatter }) => (
         <ProjectWrapper key={slug} slug={slug} frontmatter={frontmatter}/>
       ))}

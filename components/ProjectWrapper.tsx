@@ -33,6 +33,7 @@ export default function ProjectWrapper({ slug, frontmatter }: Props) {
       className={styles.project}
     >
       <div className={styles.leftCorners} />
+      <div className={styles.rightCorners} />
       <h1 className={styles.name}>{frontmatter.title}</h1>
       <div className={styles.info}>
         <Image
@@ -102,7 +103,6 @@ export default function ProjectWrapper({ slug, frontmatter }: Props) {
           </li>
         ))}
       </ul>
-      <div className={styles.rightCorners} />
     </motion.article>
   );
 }
