@@ -1,16 +1,18 @@
 ---
-title: "Jobly"
-problem: "Job seekers need to track multiple job postings, applications, and interview schedules, as well as research companies and gather important details about each job opportunity."
-solution: "Web application to manage and organize all aspects of job search, including job postings, interviews, and notes."
+title: "Portfolio"
+problem: "Increase my visibility to potential employers and enhance my chances of getting hired by 
+showcasing my skills and experience in a visually appealing and organized manner."
+solution: "Portfolio website with a modern design and smooth/engaging user experience, 
+that allows anyone to easily learn more about me and my capabilities. Each section is designed to 
+highlight my strengths and demonstrate my expertise in front-end development."
 thumbnail: images/jobly-thumbnail.png
 siteUrl: "https://www.joblyapp.net/"
-codeUrl: "https://github.com/patrick-potocny/jobly"
+codeUrl: "https://github.com/patrick-potocny/portfolio"
 technologies:
   - NEXT.JS
   - REACT
   - TYPESCRIPT
   - SCSS
-  - FIREBASE
 toc: 
   - overview
   - goals
@@ -37,7 +39,9 @@ The next step involved the creation of a simple landing page. Additionally, a de
 
 The main feature of the app is the jobs dashboard. I started with pen and paper and created wireframes to iterate over designs while keeping in mind the main goal of effortlessly adding and viewing job postings' details. After considering different options, I chose to use a table to display job details. This decision was based on the fact that there are many details to include in a job posting, and a table makes it easier to compare different jobs as the same details are presented in the same order.
 
-Lastly, the notes dashboard consists of simple square cards that display the note's title and the first few rows of its content. To make it easier for users to copy the notes, a button has been included in the corner of each note that copies the note to the user's clipboard.
+Lastly, the notes dashboard consists of simple square cards that display the note's title and the first few rows of its content. To make it easier for users to copy the notes, a button has been included in the corner of each note that copies the note to the user's clipboard."
+
+I only made a few minor corrections to improve readability and clarity. Overall, it looks great!
 
 Then i brought theese drawings to life in Figma:
 ![Figma design](/images/jobly-figma.png)

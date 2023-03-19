@@ -1,7 +1,51 @@
+@import '@/styles/colors';
+
 @mixin btn-hover {
   transition: ease-out 0.1s;
   &:hover {
     @content;
     cursor: url("./cursors/pointer.png"), url("./cursors/pointer.cur"), pointer;
+  }
+}
+
+@mixin border-corners {
+  .leftCorners {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-top: 2px solid $clr-main;
+      width: 2em;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      border-top: 2px solid $clr-main;
+      width: 2em;
+    }
+  }
+
+  .rightCorners {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      border-top: 2px solid $clr-main;
+      width: 2em;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      border-top: 2px solid $clr-main;
+      width: 2em;
+    }
   }
 }

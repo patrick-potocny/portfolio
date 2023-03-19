@@ -10,18 +10,11 @@ import rightArrow from "@/public/images/rightArrow.svg";
 import rightArrowHover from "@/public/images/rightArrowHover.svg";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { Frontmatter } from "@/lib/types";
 
 type Props = {
   slug: string;
-  frontmatter: {
-    title: string;
-    thumbnail: string;
-    problem: string;
-    solution: string;
-    siteUrl: string;
-    codeUrl: string;
-    technologies: string[];
-  };
+  frontmatter: Frontmatter;
 };
 
 export default function ProjectWrapper({ slug, frontmatter }: Props) {

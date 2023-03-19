@@ -1,21 +1,14 @@
 import Layout from "@/components/Layout";
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect } from "react";
 import { SeenWelcomeScreenCtx } from "@/context/SeenWelcomePageCtx";
 import fs from "fs";
 import matter from "gray-matter";
 import ProjectWrapper from "@/components/ProjectWrapper";
+import { Frontmatter } from "@/lib/types";
 
 type Project = {
   slug: string;
-  frontmatter: {
-    title: string;
-    thumbnail: string;
-    problem: string;
-    solution: string;
-    siteUrl: string;
-    codeUrl: string;
-    technologies: string[];
-  };
+  frontmatter: Frontmatter
 };
 
 type ProjectsProps = {
