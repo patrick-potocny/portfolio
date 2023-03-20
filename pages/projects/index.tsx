@@ -4,17 +4,8 @@ import { SeenWelcomeScreenCtx } from "@/context/SeenWelcomePageCtx";
 import fs from "fs";
 import matter from "gray-matter";
 import ProjectWrapper from "@/components/ProjectWrapper";
-import { Frontmatter } from "@/lib/types";
 import Head from "next/head";
-
-type Project = {
-  slug: string;
-  frontmatter: Frontmatter
-};
-
-type ProjectsProps = {
-  projects: Project[];
-};
+import { ProjectsProps } from "@/lib/types";
 
 export async function getStaticProps() {
   // Get all projects

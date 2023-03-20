@@ -8,3 +8,12 @@ export type Frontmatter = {
   technologies: string[];
   toc: string[];
 };
+
+export type Project = {
+  slug: string;
+  frontmatter: Frontmatter
+};
+
+export type ProjectsProps = {
+  projects: Project[];
+};

@@ -5,15 +5,15 @@ type TypewriterProps = {
   onEnd: () => void;
 };
 
-const Typewriter: React.FC<TypewriterProps> = ({ text, onEnd}) => {
+const Typewriter: React.FC<TypewriterProps> = ({ text, onEnd }) => {
   const [displayText, setDisplayText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [delay, setDelay] = useState(0);
 
   function randomDelay() {
-    return Math.floor(Math.random() * (50 - 30 + 1) + 30);
+    return Math.floor(Math.random() * (70 - 10 + 1)) + 10;
   }
-  
+
   useEffect(() => {
     const timer = setTimeout(() => {
       if (currentIndex < text.length) {
