@@ -1,0 +1,57 @@
+@import '@/styles/colors';
+@import '@/styles/mixins';
+
+.title {
+  font-size: 3em;
+  text-align: center;
+  margin-bottom: .3em;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  flex-wrap: wrap;
+
+  .contactCard {
+    position: relative;
+    width: 19em;
+    border: 1px solid $clr-main;
+    border-top: none;
+    border-bottom: none;
+    padding: 1em .3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+
+    @include border-corners;
+
+    .icon {
+      height: 4em;
+      width: auto;
+    }
+
+    .title {
+      font-size: 1.8em;
+    }
+
+    .contact {
+      font-size: 1.5em;
+    }
+
+    .btn {
+      font-size: 1.2em;
+      color: $clr-main;
+      background-color: $clr-sec;
+      padding: .3em 1em;
+      margin-top: auto;
+      
+      @include btn-hover {
+        color: $clr-bg;
+        background-color: $clr-main;
+      }
+    }
+
+  }
+}
