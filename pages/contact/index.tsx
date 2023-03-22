@@ -43,8 +43,8 @@ export default function Contact() {
           <div className={styles.rightCorners} />
           <Image className={styles.icon} src={email} alt="Email" />
           <h2 className={styles.title}>Email</h2>
-          <p className={styles.contact}>email@email.com</p>
-          <CopyToClipboard text="email@email.com">
+          <p className={styles.contact}>patrik@patrikp.dev</p>
+          <CopyToClipboard text="patrik@patrikp.dev">
             <button className={styles.btn}>Copy Email</button>
           </CopyToClipboard>
         </motion.div>
@@ -58,7 +58,7 @@ export default function Contact() {
           <div className={styles.rightCorners} />
           <Image className={styles.icon} src={linkedIn} alt="LinkedIn" />
           <h2 className={styles.title}>LinkedIn</h2>
-          <button className={styles.btn}>My Profile</button>
+          <a href="https://www.linkedin.com/in/patrikpotocny/" target="_blank" className={styles.btn}>My Profile</a>
         </motion.div>
         <motion.div
           initial={{ x: 20, opacity: 0 }}

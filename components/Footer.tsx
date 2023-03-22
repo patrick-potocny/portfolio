@@ -32,7 +32,7 @@ export default function Footer() {
       <div className={styles.footerUnderline} />
       <footer className={styles.footer}>
         <a
-          href="#"
+          href="https://www.linkedin.com/in/patrikpotocny"
           target="_blank"
           className={styles.link}
           onMouseEnter={() => setLinkedInIcon(linkedInHover)}
@@ -46,7 +46,7 @@ export default function Footer() {
           <span>LinkedIn</span>
         </a>
         <a
-          href="#"
+          href="https://github.com/patrick-potocny"
           target="_blank"
           className={styles.link}
           onMouseEnter={() => setGitHubIcon(gitHubHover)}
@@ -55,14 +55,13 @@ export default function Footer() {
           <Image src={gitHubIcon} alt="GitHub icon" className={styles.icon} />
           <span>Github</span>
         </a>
-        <CopyToClipboard text="myemail@gmail.com" onCopy={showCopied}>
+        <CopyToClipboard text="patrik@patrikp.dev" onCopy={showCopied}>
           <button
             className={styles.link}
             onMouseEnter={() => setEmailIcon(emailHover)}
             onMouseLeave={() => setEmailIcon(email)}
           >
-            <Image src={emailIcon} alt="Email icon" className={styles.icon} />
-            <span>myemail@email.com</span>
+            <span>patrik@patrikp.dev</span>
             <AnimatePresence>
               {copied && (
                 <motion.div
@@ -80,14 +79,14 @@ export default function Footer() {
           </button>
         </CopyToClipboard>
         <a
-          href="/files/dummy.pdf"
+          href="/files/potocny-cv.pdf"
           target="_blank"
           className={styles.link}
           onMouseEnter={() => setResumeIcon(resumeHover)}
           onMouseLeave={() => setResumeIcon(resume)}
         >
           <Image src={resumeIcon} alt="File icon" className={styles.icon} />
-          <span>Resume</span>
+          <span>Resumé</span>
         </a>
       </footer>
     </>
