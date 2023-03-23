@@ -4,7 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import Layout from "@/components/Layout";
 import { SeenWelcomeScreenCtx } from "@/context/SeenWelcomePageCtx";
 import styles from "@/styles/pages/Home.module.scss";
-import Link from "next/link";
+import Link from "@/lib/link";
 import SkillsRadar from "@/components/SkillsRadar";
 import Typewriter from "@/components/Typewriter";
 import { glitchAnimation } from "@/lib/utils";
@@ -96,7 +96,9 @@ export default function Home() {
                   className={styles.link}
                 >
                   To back up my claims, here are my most recent{" "}
-                  <Link href="/projects" className={styles.linkBtn}>
+                  <Link href="/projects" 
+                  className={styles.linkBtn}
+                  >
                     PROJECTS
                   </Link>
                 </motion.p>
@@ -106,7 +108,9 @@ export default function Home() {
                   className={styles.link}
                 >
                   Learn more{" "}
-                  <Link href="/about" className={styles.linkBtn}>
+                  <Link href="/about" 
+                  className={styles.linkBtn}
+                  >
                     ABOUT ME
                   </Link>
                 </motion.p>

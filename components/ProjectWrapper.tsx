@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "@/styles/components/ProjectWrapper.module.scss";
 import Image from "next/image";
-import Link from "next/link";
+import Link from "@/lib/link";
 import gitHub from "@/public/images/gitHub.svg";
 import gitHubHover from "@/public/images/gitHubHover.svg";
 import link from "@/public/images/link.svg";

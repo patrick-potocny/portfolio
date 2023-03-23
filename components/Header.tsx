@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "@/styles/components/Header.module.scss";
-import Link from "next/link";
+import Link from "@/lib/link";
 import { useRouter } from "next/router";
 import BurgerMenu from "@/components/BurgerMenu";
 

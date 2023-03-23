@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styles from "@/styles/components/BurgerMenu.module.scss";
 import { Squash as Hamburger } from "hamburger-react";
 import { AnimatePresence, motion } from "framer-motion";
-import Link from "next/link";
+import Link from "@/lib/link";
 
 export default function BurgerMenu({ currentPage }: { currentPage: string }) {
   const [open, setOpen] = useState(false);

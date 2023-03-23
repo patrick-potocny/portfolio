@@ -6,7 +6,7 @@ import styles from "@/styles/pages/About.module.scss";
 import Image from "next/image";
 import boyComputer from "@/public/images/boyComputer.png";
 import boyReading from "@/public/images/boyReading.gif";
-import Link from "next/link";
+import Link from "@/lib/link";
 import computer from "@/public/images/experience.png";
 import SkillsRadar from "@/components/SkillsRadar";
 
@@ -45,6 +45,7 @@ export default function About() {
             </p>
           </div>
           <Image
+            priority
             className={styles.image}
             src={boyComputer}
             alt="Boy sitting on computer"
@@ -69,7 +70,7 @@ export default function About() {
               </Link>
             </p>
           </div>
-          <Image className={styles.expImage} src={computer} alt="Computer" />
+          <Image priority className={styles.expImage} src={computer} alt="Computer" />
         </section>
 
         <section className={styles.section}>
@@ -109,7 +110,7 @@ export default function About() {
               my independence in designing and developing my own projects.
             </p>
           </div>
-          <Image className={styles.gif} src={boyReading} alt="Boy reading" />
+          <Image priority className={styles.gif} src={boyReading} alt="Boy reading" />
         </section>
 
         <section className={styles.section}>
