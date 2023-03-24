@@ -4,7 +4,7 @@ import { useContext, useEffect, useState } from "react";
 import Layout from "@/components/Layout";
 import ReactMarkdown from "react-markdown";
 import { SeenWelcomeScreenCtx } from "@/context/SeenWelcomePageCtx";
-import styles from "@/styles/pages/Project.module.scss";
+import styles from "@/styles/pages/CaseStudy.module.scss";
 import { Frontmatter } from "@/lib/types";
 import Image from "next/image";
 import TableOfContents from "@/components/TableOfContents";
@@ -51,7 +51,7 @@ export async function getStaticProps({ params: { slug } }: Params) {
   };
 }
 
-export default function ProjectPage({ frontmatter, content }: Props) {
+export default function CaseStudy({ frontmatter, content }: Props) {
   const { setSeenWelcomePage } = useContext(SeenWelcomeScreenCtx);
   const [gitHubIcon, setGitHubIcon] = useState(gitHub);
   const [linkIcon, setLinkIcon] = useState(link);

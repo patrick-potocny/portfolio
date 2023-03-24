@@ -13,6 +13,11 @@ type Props = {
   onMouseLeave?: () => void;
 };
 
+// This component is a replacement for the default next/link component. It is used with 
+// lib/customAnimatePresence.tsx to animate page transitions because using the default
+// next/link component removed the scss styles from the page before exit animation finished.
+// This issue and solution is described more in this issue: 
+// https://github.com/vercel/next.js/discussions/18724#discussioncomment-4421594
 export default function Link({
   children,
   href,
@@ -38,7 +43,7 @@ export default function Link({
   }, [router, href, prefetch, externalLink]);
 
   /* If href is equal to current route, return children */
-  if (asPath == href) return <span {...props}>{children}</span>;
+  if (asPath == href) return <span className={className} {...props}>{children}</span>;
 
   /* Create custom event on click and dispatch it */
   // @ts-ignore

@@ -86,9 +86,9 @@ export default function Home() {
                   <span className={styles.firstWord}>Hi</span>, I'm Patrik,
                   experienced Front-End Developer with a passion for creating
                   visually pleasing websites and web applications, that deliver
-                  exceptional user experiences. Since knowledge is power, I'm
-                  always looking for new challenges and opportunities to improve
-                  my skills.
+                  exceptional user experiences. I am eager to continue expanding
+                  my skillset and work with talented individuals to bring ideas
+                  to life.
                 </motion.p>
                 <motion.p
                   {...commonProps}
@@ -96,9 +96,7 @@ export default function Home() {
                   className={styles.link}
                 >
                   To back up my claims, here are my most recent{" "}
-                  <Link href="/projects" 
-                  className={styles.linkBtn}
-                  >
+                  <Link href="/projects" className={styles.linkBtn}>
                     PROJECTS
                   </Link>
                 </motion.p>
@@ -108,11 +106,23 @@ export default function Home() {
                   className={styles.link}
                 >
                   Learn more{" "}
-                  <Link href="/about" 
-                  className={styles.linkBtn}
-                  >
+                  <Link href="/about" className={styles.linkBtn}>
                     ABOUT ME
                   </Link>
+                </motion.p>
+                <motion.p
+                  {...commonProps}
+                  transition={{ duration: 1, delay: 0.7 }}
+                  className={`${styles.link} ${styles.resumeLink}`}
+                >
+                  Check out my{" "}
+                  <a
+                    href="/files/potocny-cv.pdf"
+                    target="_blank"
+                    className={styles.linkBtn}
+                  >
+                    RESUME
+                  </a>
                 </motion.p>
               </section>
               <motion.section

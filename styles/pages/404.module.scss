@@ -1,0 +1,36 @@
+@import '@/styles/colors';
+@import '@/styles/mixins';
+
+.notFound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  color: $clr-main;
+
+  h1 {
+    font-size: 9rem;
+    font-weight: 800;
+    background-clip: text;
+  }
+  p {
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+
+  button {
+    padding: 1em;
+    margin-top: 1em;
+    font-size: 1.3em;
+    color: $clr-main;
+    background-color: $clr-sec;
+
+    @include btn-hover {
+      background-color: $clr-main;
+      color: $clr-bg;
+      scale: 1.1;
+    }
+  }
+}

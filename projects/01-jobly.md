@@ -1,7 +1,7 @@
 ---
 title: "Jobly"
 problem: "Job seekers need to track multiple job postings, applications, and interview schedules, as well as research companies and gather important details about each job opportunity."
-solution: "Web application to manage and organize all aspects of job search, including job postings, interviews, and notes."
+solution: "Web application that can help manage and organize all aspects of job search, including job postings, interviews, and notes, can make the lives of job seekers easier."
 thumbnail: images/jobly-thumbnail.png
 siteUrl: "https://www.joblyapp.net/"
 codeUrl: "https://github.com/patrick-potocny/jobly"
@@ -11,7 +11,7 @@ technologies:
   - TYPESCRIPT
   - SCSS
   - FIREBASE
-toc: 
+toc:
   - overview
   - goals
   - design
@@ -60,7 +60,7 @@ Finally, Firebase was selected as the backend solution for this project because 
 
 ### Process
 
-In the development of my web application, I placed a strong emphasis on following coding best practices such as SOLID principles and using Git for version control. Implementing these practices ensured that my code was organized, modular, and easy to maintain.
+In the development of my web application, I placed a strong emphasis on following best coding practices such as SOLID principles and using Git for version control. Implementing these practices ensured that my code was organized, modular, and easy to maintain.
 
 During the development process, I began by creating a high-level architecture of the application and breaking it down into smaller components. I ensured that each component had a clear responsibility, adhering to the Single Responsibility Principle of SOLID. This approach made it easy to make modifications to the codebase as the project progressed.
 
@@ -92,4 +92,4 @@ I faced several challenges during the development process, such as implementing 
 
 Moreover, working with my main tech stack that includes Next.js, React, Typescript, SCSS, and Firebase, allowed me to better understand how to leverage each technology's strengths to create a highly efficient, user-friendly, and visually appealing web application. I gained experience in creating reusable components, managing state with React, utilizing Firebase's Authentication and Database, and styling the app with SCSS modules.
 
-Overall, the development of Jobly gave me a comprehensive understanding of the end-to-end web development process. It provided me with practical experience in using modern web technologies, as well as problem-solving skills and best practices that will be beneficial for future projects.
+Jobly has successfully achieved all of its set goals, empowering job seekers to streamline their job search process, save and access various important job details from any device, and make informed decisions about their job choices. Its user-friendly interface has made it easier for users to organize and track multiple job postings, interviews, and other relevant information. The app's notes feature has provided users with the ability to create and add notes that can be easily copied and utilized as needed. Furthermore, Jobly's article containing important tips for job seekers has enabled users to avoid making mistakes and make informed decisions about their job choices. Overall, Jobly has successfully provided a comprehensive and efficient job search platform for its users.

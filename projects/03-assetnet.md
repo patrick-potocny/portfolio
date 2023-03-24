@@ -1,6 +1,6 @@
 ---
 title: "AssetNet"
-problem: "Easily keep track of the prices of your favorite assets, like cryptocurrencies and stocks."
+problem: "It can be difficult to keep track of the prices of your favorite assets, such as cryptocurrencies and stocks."
 solution: "User-friendly web application that presents the latest data on users' selected assets in 
 a customizable and easily accessible interface."
 thumbnail: images/assetnet-thumbnail.png
@@ -33,7 +33,7 @@ AssetNet is a web-app that provides users with the ability to effortlessly view 
 
 The design process for AssetNet began with the creation of a brand identity that encompasses a name, logo, color palette, and font. I chose the name AssetNet as it conveys the app's focus on assets. When it comes to color palette and font i got inspired by Apples iOS operating system.
 
-To optimize the user experience, I made the strategic decision to create a single page application for AssetNet without any additional landing pages. Upon launching the app, users can immediately view and monitor the prices and fluctuations of their selected assets.
+To optimize the user experience, I made the strategic decision to create a single page application for AssetNet without any additional landing page. Upon launching the app, users can immediately view and monitor the prices and fluctuations of their selected assets.
 
 In order to display the data in a clear and visually appealing way, I opted to use cards, drawing inspiration from the design of the iPhone's Stocks app. This approach allowed for easy visualization of the current price of each asset, as well as its historical fluctuations over time. To further enhance the user experience, I also incorporated a dark mode option, giving users the ability to select between light or dark themes. This feature not only adds a personal touch to the app, but also helps to reduce eye strain and improve readability in low light environments.
 
@@ -51,11 +51,11 @@ React was selected as the front-end library for this project because of its decl
 
 For styling the app, I utilized SCSS, a CSS preprocessor that is known for streamlining the process of writing and maintaining CSS code to a higher standard. Since the app was not large enough, I didn't need to use SCSS modules to avoid class name collisions. However, to keep the class names up to a certain standard, the BEM naming convention was employed. At the end, all the SCSS files were compiled into one single CSS file.
 
-Next, I sourced reliable and fast APIs for real-time and historical data of cryptocurrencies and stocks, ultimately selecting [Coinranking](https://developers.coinranking.com/api) for crypto data and [Alpha Vantage](https://www.alphavantage.co/) for stocks.
+Next, I sourced reliable and fast APIs for real-time and historical data of cryptocurrencies and stocks, ultimately selecting [Coinranking](https://developers.coinranking.com/api) for crypto data and [Alpha Vantage](https://www.alphavantage.co/) for stocks, because of their good reliability and speed.
 
 ### Process
 
-In the development of my web application, I placed a strong emphasis on following coding best practices, such as adhering to SOLID principles, utilizing Git for version control, and implementing unit testing using Jest. By implementing these practices, I ensured that my code was organized, modular, and easy to maintain.
+In the development of my web application, I placed a strong emphasis on following best coding practices, such as adhering to SOLID principles, utilizing Git for version control, and implementing unit testing using Jest. By implementing these practices, I ensured that my code was organized, modular, and easy to maintain.
 
 To enhance the user experience, I aimed to ensure simplicity in the application design. Therefore, I opted not to include any login or registration requirements, which could be time-consuming and complicated. Instead, I utilized local storage as a means of storing user preferences, such as selected digital assets, preferred time frames, and color schemes (light or dark mode). This approach ensures users can effortlessly access and edit their preferred assets, with real-time price and performance data readily available upon opening the application.
 
@@ -69,7 +69,7 @@ Throughout the development process, I began by creating a high-level architectur
 
 #### **Two different APIs data structures:**
 
-- As a result of utilizing two distinct API providers, one for cryptocurrency data and the other for stock data, there were notable differences in their responses like different time zones, and the provided data. Consequently, I developed numerous utility functions to convert the data into a uniform type, incorporating all the relevant data in the correct formats to enable seamless integration across the entire application.
+- As a result of utilizing two distinct API providers, one for cryptocurrency data and the other for stock data, there were notable differences in their responses like different time zones, and the provided data. I developed numerous utility functions to convert the data into a uniform type, incorporating all the relevant data in the correct formats to enable seamless integration across the entire application.
 
 ## Conclusion
 
@@ -79,4 +79,4 @@ Throughout the development process, I encountered multiple challenges, such as i
 
 Working with my primary tech stack, which includes React and SCSS, I obtained a better understanding of how to utilize each technology's strengths to design a highly efficient, user-friendly, and visually appealing web application. I gained proficiency in creating reusable components, managing state with React, and styling the app with SCSS.
 
-Overall, the development of AssetNet equipped me with a comprehensive understanding of the complete web development process. It provided me with practical experience in utilizing modern web technologies, best practices, and problem-solving skills that will be beneficial for my future projects.
+AssetNet achieved the goals of providing users with easy access to asset prices and fluctuations, and creating a personalized user experience. The web application's user-friendly interface allows users to customize their preferences, such as the displayed assets and appearance, and retain them for future use, providing a seamless experience upon each return visit. The use of cards to display the data in a clear and visually appealing way, along with the incorporation of a dark mode option, further enhance the user experience. 

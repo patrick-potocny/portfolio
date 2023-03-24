@@ -27,7 +27,8 @@
       }
     }
 
-    .introduction, .link {
+    .introduction,
+    .link {
       border-left: 2px solid $clr-main;
       padding-left: 1em;
       margin-left: 1.5em;
@@ -39,9 +40,8 @@
       .firstWord {
         font-size: 2em;
       }
-
     }
-    
+
     .link {
       line-height: 1.6;
 
@@ -49,12 +49,16 @@
         color: $clr-main;
         border: 2px dashed $clr-main;
         padding: 0.1em 0.3em;
-  
+
         @include btn-hover {
           color: $clr-bg;
           background-color: $clr-main;
         }
       }
+    }
+
+    .resumeLink {
+      display: none;
     }
   }
 
@@ -62,7 +66,7 @@
     width: 100%;
     max-width: 45em;
     flex: 1;
-    padding-right: .5em;
+    padding-right: 0.5em;
   }
 }
 
@@ -85,7 +89,8 @@
         1rem
       );
 
-      .introduction, .link {
+      .introduction,
+      .link {
         padding-left: 0.5em;
       }
     }
@@ -121,9 +126,20 @@
         }
       }
 
-      .introduction, .link {
+      .introduction,
+      .link {
         padding-inline: 0.5em;
         margin-left: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 52em) {
+  .heroContainer {
+    .hero {
+      .resumeLink {
+        display: block;
       }
     }
   }
