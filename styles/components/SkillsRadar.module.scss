@@ -1,14 +1,6 @@
 @import "@/styles/colors";
 @import "@/styles/animations";
 
-.title {
-  display: none;
-  text-align: center;
-  font-size: 3em;
-  margin-bottom: 0.5em;
-  opacity: 0.6;
-}
-
 .panel {
   box-shadow: inset 0 0 0 6.1875em $clr-bg,
     inset 0 0 0 6.25em rgba($clr-main, 0.2), inset 0 0 0 12.4375em $clr-bg,
@@ -120,6 +112,18 @@
         top: 87%;
         left: 40%;
       }
+
+      &:nth-child(10) {
+        animation-delay: 3200ms;
+        top: 10%;
+        left: 25%;
+      }
+
+      &:nth-child(11) {
+        animation-delay: 1700ms;
+        top: 58%;
+        left: 8%;
+      }
     }
   }
 }
@@ -145,9 +149,6 @@
 }
 
 @media (max-width: 75em) {
-  .title {
-    display: block;
-  }
   .panel {
     font-size: 0.3rem;
     font-size: clamp(0.3rem, 0.0625rem + 1.25vw, 1rem);

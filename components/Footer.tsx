@@ -4,8 +4,6 @@ import linkedIn from "@/public/images/linkedIn.svg";
 import linkedInHover from "@/public/images/linkedInHover.svg";
 import gitHub from "@/public/images/gitHub.svg";
 import gitHubHover from "@/public/images/gitHubHover.svg";
-import email from "@/public/images/email.svg";
-import emailHover from "@/public/images/emailHover.svg";
 import resume from "@/public/images/resume.svg";
 import resumeHover from "@/public/images/resumeHover.svg";
 import Image from "next/image";
@@ -16,7 +14,6 @@ import { glitchAnimation } from "@/lib/utils";
 export default function Footer() {
   const [linkedInIcon, setLinkedInIcon] = useState(linkedIn);
   const [gitHubIcon, setGitHubIcon] = useState(gitHub);
-  const [emailIcon, setEmailIcon] = useState(email);
   const [resumeIcon, setResumeIcon] = useState(resume);
   const [copied, setCopied] = useState(false);
 
@@ -53,13 +50,11 @@ export default function Footer() {
           onMouseLeave={() => setGitHubIcon(gitHub)}
         >
           <Image src={gitHubIcon} alt="GitHub icon" className={styles.icon} />
-          <span>Github</span>
+          <span>GitHub</span>
         </a>
         <CopyToClipboard text="patrik@patrikp.dev" onCopy={showCopied}>
           <button
             className={styles.link}
-            onMouseEnter={() => setEmailIcon(emailHover)}
-            onMouseLeave={() => setEmailIcon(email)}
           >
             <span>patrik@patrikp.dev</span>
             <AnimatePresence>
@@ -86,7 +81,7 @@ export default function Footer() {
           onMouseLeave={() => setResumeIcon(resume)}
         >
           <Image src={resumeIcon} alt="File icon" className={styles.icon} />
-          <span>Resumé</span>
+          <span>Resume</span>
         </a>
       </footer>
     </>

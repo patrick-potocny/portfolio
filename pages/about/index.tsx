@@ -3,15 +3,19 @@ import { SeenWelcomeScreenCtx } from "@/context/SeenWelcomePageCtx";
 import Head from "next/head";
 import React, { useContext, useEffect } from "react";
 import styles from "@/styles/pages/About.module.scss";
-import Image from "next/image";
 import boyComputer from "@/public/images/boyComputer.png";
 import boyReading from "@/public/images/boyReading.gif";
 import Link from "@/lib/link";
 import computer from "@/public/images/experience.png";
+import AboutSection from "@/components/AboutSection";
 import SkillsRadar from "@/components/SkillsRadar";
+import AboutLinks from "@/components/AboutLinks";
+import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 
 export default function About() {
   const { setSeenWelcomePage } = useContext(SeenWelcomeScreenCtx);
+  const { ref, inView } = useInView({ triggerOnce: true });
 
   // Set seenWelcomePage to true so that the welcome screen is not shown
   // when user redirects to home page.
@@ -25,105 +29,95 @@ export default function About() {
         <title>About</title>
       </Head>
       <div className={styles.container}>
-        <section className={styles.section}>
-          <div className={styles.text}>
-            <h1 className={styles.title}>Hi</h1>
-            <p className={styles.paragraph}>
-              My name is Patrik Potocny, and I am a dedicated Front-End
-              developer with a passion for creating beautiful and functional
-              websites. I have a strong background in HTML, CSS, JavaScript,
-              React, and TypeScript.
-            </p>
-            <p className={styles.paragraph}>
-              I am eager to continue expanding my skillset and work with
-              talented individuals to bring ideas to life. I am committed to
-              delivering top-quality code and exceptional user experiences.
-            </p>
+        <AboutSection imageUrl={boyComputer}>
+          <h1>Hi</h1>
+          <p>
+            My name is Patrik Potocny, and I am a dedicated Front-End developer
+            with a passion for creating beautiful and functional websites. I
+            have a strong background in HTML, CSS, JavaScript, React, TypeScript
+            and many other related technologies.
+          </p>
+          <p>
+            I am eager to continue expanding my skillset and work with talented
+            individuals to bring ideas to life. I am committed to delivering
+            top-quality code and exceptional user experiences.
+          </p>
 
-            <p className={styles.paragraph}>
-              Give me a problem and i'll give you a solution.
-            </p>
-          </div>
-          <Image
-            priority
-            className={styles.image}
-            src={boyComputer}
-            alt="Boy sitting on computer"
-          />
-        </section>
+          <p>Give me a problem and i'll give you a solution.</p>
+        </AboutSection>
 
-        <section className={styles.section}>
-          <div className={styles.text}>
-            <h1 className={styles.title}>Experience</h1>
-            <p className={styles.paragraph}>
-              When the COVID pandemic hit back in 2020, I immediately took that
-              as an opportunity to learn something new and I dove deep into the
-              world of programming. After three years, I still haven't stopped.
-            </p>
-            <p className={styles.paragraph}>
-              During this time, I have gained a lot of experience in end-to-end
-              web application development, which means going from an idea to a
-              working web application/website. To prove my experience, you can
-              check out some of my latest{" "}
-              <Link className={styles.link} href="/projects">
-                PROJECTS
-              </Link>
-            </p>
-          </div>
-          <Image priority className={styles.expImage} src={computer} alt="Computer" />
-        </section>
+        <AboutLinks />
 
-        <section className={styles.section}>
-          <div className={styles.text}>
-            <h1 className={styles.title}>Skills</h1>
-            <p className={styles.paragraph}>
-              I have a strong background in: <br />
-              - HTML, CSS, JavaScript, React, TypeScript, NextJS, Git
-            </p>
-            <p className={styles.paragraph}>
-              Among my other skills are: <br />
-              - Figma, attention to detail, problem solving, communication, and time management
-            </p>
-          </div>
-        </section>
+        <AboutSection imageUrl={computer} applyFilter>
+          <h1>Experience</h1>
+          <p>
+            During the past year, I have focused on translating designs into
+            fully-functional websites and web applications, with my latest
+            project being:
+          </p>
+          <p>
+            <strong>
+              <Link href="/projects/01-jobly">Jobly</Link>
+            </strong>{" "}
+            - Web application that can help manage and organize all aspects of
+            job search, including job postings, interviews, and notes, making
+            life easier for job seekers.
+          </p>
+          <p>
+            Check out my other <Link href="/projects">PROJECTS</Link>
+          </p>
+        </AboutSection>
 
-        <section className={styles.section}>
-          <div className={styles.text}>
-            <h1 className={styles.title}>Education</h1>
-            <p className={styles.paragraph}>
-              <strong>GOOGLE UX DESIGN</strong> - course tought me the
-              fundamentals of UX design, including research, prototyping, and
-              testing, to create user-centered digital experiences -{" "}
-              <a
-                href="/files/google-certificate.pdf"
-                target="_blank"
-                className={styles.link}
-              >
-                CERTIFICATE
-              </a>
-            </p>
-            <p className={styles.paragraph}>
-              <strong>THE ODIN PROJECT</strong> - is an online curriculum that
-              provides comprehensive courses and resources centered on front-end
-              development. I opted for this platform due to its hands-on,
-              project-based learning methodology, which significantly enhanced
-              my independence in designing and developing my own projects.
-            </p>
-          </div>
-          <Image priority className={styles.gif} src={boyReading} alt="Boy reading" />
-        </section>
+        <motion.div
+          ref={ref}
+          initial={{ opacity: 0, y: 20 }}
+          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 1 }}
+          className={styles.skills}
+        >
+          <SkillsRadar />
+        </motion.div>
 
-        <section className={styles.section}>
-          <div className={styles.text}>
-            <h1 className={styles.title}>Let's work together</h1>
-            <p className={styles.paragraph}>
-              If you'r interested, feel free to{" "}
-              <Link className={styles.link} href="/contact">
-                CONTACT ME
-              </Link>
-            </p>
-          </div>
-        </section>
+        <AboutSection imageUrl={boyReading} applyFilter>
+          <h1>My Approach</h1>
+          <p>
+            When it comes to problem-solving, I take a methodical and strategic
+            approach, breaking down complex issues into manageable steps and
+            leveraging my skills to provide the best possible solution.
+          </p>
+          <p>
+            As a developer, I understand the importance of soft skills, and I
+            strive to demonstrate them in every work environment. Communication
+            is key to the success of any project, and I make sure to keep all
+            team members updated on my progress and any issues that arise.
+            Finally, adaptability is essential in the fast-paced world of
+            front-end development, and I am always eager to learn and grow,
+            keeping up-to-date with the latest trends and technologies in the
+            field.
+          </p>
+        </AboutSection>
+
+        <AboutSection>
+          <h1>Goal</h1>
+          <p>
+            My ultimate goal is to become a lead developer in a team of talented
+            and like-minded individuals. I strive to be the driving force behind
+            successful projects and to take on a leadership role in creating
+            innovative solutions that push the boundaries of what is possible.
+            With my passion for learning and my eagerness to take on new
+            challenges, I am confident that I can achieve this goal and make a
+            positive impact on any team I am a part of.
+          </p>
+        </AboutSection>
+
+        <AboutSection>
+          <h1>Get in Touch</h1>
+          <p>
+            If you're interested in learning more about my skills and
+            experience, please feel free to{" "}
+            <Link href="/contact">CONTACT ME</Link>
+          </p>
+        </AboutSection>
       </div>
     </Layout>
   );

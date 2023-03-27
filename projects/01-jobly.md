@@ -1,7 +1,7 @@
 ---
 title: "Jobly"
 problem: "Job seekers need to track multiple job postings, applications, and interview schedules, as well as research companies and gather important details about each job opportunity."
-solution: "Web application that can help manage and organize all aspects of job search, including job postings, interviews, and notes, can make the lives of job seekers easier."
+solution: "Web application that can help manage and organize all aspects of job search, including job postings, interviews, and notes, making life easier for job seekers."
 thumbnail: images/jobly-thumbnail.png
 siteUrl: "https://www.joblyapp.net/"
 codeUrl: "https://github.com/patrick-potocny/jobly"

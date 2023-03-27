@@ -4,7 +4,6 @@ import styles from "@/styles/components/SkillsRadar.module.scss";
 export default function SkillsRadar() {
   return (
     <>
-    <h2 className={styles.title}>MY SKILLS</h2>
     <div className={styles.panel}>
       <div className={styles.scanner}></div>
       <ul className={styles.items}>
@@ -17,6 +16,8 @@ export default function SkillsRadar() {
         <li>SCSS</li>
         <li>NEXT.JS</li>
         <li>UI/UX</li>
+        <li>REST API</li>
+        <li>AGILE/SCRUM</li>
       </ul>
     </div>
     </>

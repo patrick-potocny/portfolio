@@ -4,73 +4,10 @@
 .container {
   max-width: 60em;
   margin: 0 auto;
-  .section {
-    display: flex;
-    align-items: center;
-    gap: 1em;
-    margin-block: 2em;
-
-    .text {
-      .title {
-        font-size: 2.5em;
-        font-weight: 600;
-      }
-
-      .paragraph {
-        font-size: 1.2em;
-        border-left: 2px solid $clr-main;
-        padding-left: 1em;
-        margin-bottom: 1em;
-      }
-
-      strong {
-        font-weight: 600;
-        letter-spacing: 1px;
-      }
-    }
-
-    .link {
-      color: $clr-main;
-      border: 2px dashed $clr-main;
-      padding: 0.2em 0.3em;
-
-      @include btn-hover {
-        color: $clr-bg;
-        background-color: $clr-main;
-      }
-    }
-
-    .image {
-      max-width: 30%;
-      height: 100%;
-    }
-
-    .expImage {
-      max-width: 15em;
-      height: 100%;
-      filter: grayscale(100%) brightness(50%) sepia(100%) hue-rotate(110deg)
-        saturate(1000%) contrast(1);
-    }
-
-    .gif {
-      max-width: 15em;
-      height: 100%;
-      filter: grayscale(100%) brightness(50%) sepia(100%) hue-rotate(110deg)
-        saturate(1000%) contrast(1);
-    }
-  }
 }
 
-@media (max-width: 60em) {
-  .container {
-    .section {
-      flex-direction: column;
-      align-items: center;
-
-    .image, .expImage {
-      max-width: min(35em, 80%);
-    }
-    
-    }
-  }
+.skills {
+  max-width: 38em;
+  padding: 1em;
+  margin: 2em auto;
 }

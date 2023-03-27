@@ -1,0 +1,41 @@
+@import "@/styles/colors";
+@import "@/styles/mixins";
+
+.links {
+  display: none;
+  width: fit-content;
+  margin: 3em auto;
+  justify-content: center;
+  gap: 0.5em;
+  flex-wrap: wrap;
+  padding-inline: 0.5em;
+
+  .link {
+    position: relative;
+    background-color: $clr-sec;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    padding: 0.2em 1em;
+    font-size: 1.3em;
+    color: $clr-main;
+
+    .icon {
+      margin-left: 0.2em;
+      width: auto;
+      height: 1.3em;
+    }
+
+    @include btn-hover {
+      color: $clr-bg;
+      background-color: $clr-main;
+    }
+  }
+}
+
+@media (max-width: 53em) {
+  .links {
+    display: flex;
+  }
+}

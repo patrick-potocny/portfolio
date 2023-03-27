@@ -1,0 +1,61 @@
+@import "@/styles/colors";
+@import "@/styles/mixins";
+
+.section {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-block: 2em;
+
+  .text {
+    h1 {
+      font-size: 2.5em;
+      font-weight: 600;
+    }
+
+    p {
+      max-width: 35em;
+      font-size: 1.2em;
+      border-left: 2px solid $clr-main;
+      padding-left: 1em;
+      margin-bottom: 1em;
+    }
+
+    strong {
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+  }
+
+  a {
+    color: $clr-main;
+    border: 2px dashed $clr-main;
+    padding: 0.2em 0.3em;
+
+    @include btn-hover {
+      color: $clr-bg;
+      background-color: $clr-main;
+    }
+  }
+
+  img {
+    max-width: 30%;
+    height: 100%;
+  }
+
+  .imgFilter {
+    filter: grayscale(100%) brightness(50%) sepia(100%) hue-rotate(110deg)
+      saturate(1000%) contrast(1);
+  }
+}
+
+@media (max-width: 60em) {
+  .section {
+    flex-direction: column;
+    align-items: center;
+
+    img {
+      max-width: min(25em, 60%);
+    }
+  }
+}
