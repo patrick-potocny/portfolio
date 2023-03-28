@@ -31,12 +31,12 @@ export default function About() {
       </Head>
       <div className={styles.container}>
         <AboutSection imageUrl={boyComputer}>
-          <h1>Hi</h1>
+          <h1>Patrik Potocny</h1>
           <p>
-            My name is Patrik Potocny, and I am a dedicated Front-End developer
-            with a passion for creating beautiful and functional websites. I
-            have a strong background in HTML, CSS, JavaScript, React, TypeScript
-            and many other related technologies.
+            Front-end developer with 1+ year of experience in website and web
+            application development. I specialize in turning an idea into a
+            fully functional website or web application that provides an
+            exceptional user experience and is visually appealing.
           </p>
           <p>
             I am eager to continue expanding my skillset and work with talented
@@ -105,12 +105,11 @@ export default function About() {
           <p>
             As a developer, I understand the importance of soft skills, and I
             strive to demonstrate them in every work environment. Communication
-            is key to the success of any project, and I make sure to keep all
-            team members updated on my progress and any issues that arise.
-            Finally, adaptability is essential in the fast-paced world of
-            front-end development, and I am always eager to learn and grow,
-            keeping up-to-date with the latest trends and technologies in the
-            field.
+            is key to the success of any project and and I make sure it's clear
+            and concise. Finally, adaptability is essential in the fast-paced
+            world of front-end development, and I am always eager to learn and
+            grow, keeping up-to-date with the latest trends and technologies in
+            the field.
           </p>
         </AboutSection>
 
