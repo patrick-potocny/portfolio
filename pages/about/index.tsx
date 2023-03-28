@@ -7,6 +7,7 @@ import boyComputer from "@/public/images/boyComputer.png";
 import boyReading from "@/public/images/boyReading.gif";
 import Link from "@/lib/link";
 import computer from "@/public/images/experience.png";
+import teamwork from "@/public/images/teamwork.png";
 import AboutSection from "@/components/AboutSection";
 import SkillsRadar from "@/components/SkillsRadar";
 import AboutLinks from "@/components/AboutLinks";
@@ -78,6 +79,22 @@ export default function About() {
           <SkillsRadar />
         </motion.div>
 
+        <AboutSection>
+          <h1>Education</h1>
+          <p>
+            <strong>GOOGLE UX DESIGN</strong> - course tought me the
+            fundamentals of UX design, including research, prototyping, and
+            testing, to create user-centered digital experiences -{" "}
+            <a
+              href="/files/google-certificate.pdf"
+              target="_blank"
+              className={styles.link}
+            >
+              CERTIFICATE
+            </a>
+          </p>
+        </AboutSection>
+
         <AboutSection imageUrl={boyReading} applyFilter>
           <h1>My Approach</h1>
           <p>
@@ -97,7 +114,7 @@ export default function About() {
           </p>
         </AboutSection>
 
-        <AboutSection>
+        <AboutSection imageUrl={teamwork} applyFilter>
           <h1>Goal</h1>
           <p>
             My ultimate goal is to become a lead developer in a team of talented

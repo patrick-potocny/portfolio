@@ -110,20 +110,6 @@ export default function Home() {
                     ABOUT ME
                   </Link>
                 </motion.p>
-                <motion.p
-                  {...commonProps}
-                  transition={{ duration: 1, delay: 0.7 }}
-                  className={`${styles.link} ${styles.resumeLink}`}
-                >
-                  Check out my{" "}
-                  <a
-                    href="/files/potocny-cv.pdf"
-                    target="_blank"
-                    className={styles.linkBtn}
-                  >
-                    RESUME
-                  </a>
-                </motion.p>
               </section>
               <motion.section
                 {...commonProps}

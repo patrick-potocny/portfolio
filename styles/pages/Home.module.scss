@@ -56,10 +56,6 @@
         }
       }
     }
-
-    .resumeLink {
-      display: none;
-    }
   }
 
   .right {
@@ -130,16 +126,6 @@
       .link {
         padding-inline: 0.5em;
         margin-left: 0;
-      }
-    }
-  }
-}
-
-@media (max-width: 52em) {
-  .heroContainer {
-    .hero {
-      .resumeLink {
-        display: block;
       }
     }
   }

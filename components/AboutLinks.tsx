@@ -4,8 +4,6 @@ import linkedIn from "@/public/images/linkedIn.svg";
 import linkedInHover from "@/public/images/linkedInHover.svg";
 import gitHub from "@/public/images/gitHub.svg";
 import gitHubHover from "@/public/images/gitHubHover.svg";
-import resume from "@/public/images/resume.svg";
-import resumeHover from "@/public/images/resumeHover.svg";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -13,7 +11,6 @@ import { useInView } from "react-intersection-observer";
 export default function AboutLinks() {
   const [linkedInIcon, setLinkedInIcon] = useState(linkedIn);
   const [gitHubIcon, setGitHubIcon] = useState(gitHub);
-  const [resumeIcon, setResumeIcon] = useState(resume);
   const { ref, inView } = useInView({ triggerOnce: true });
 
   return (
@@ -43,16 +40,6 @@ export default function AboutLinks() {
       >
         <Image src={gitHubIcon} alt="GitHub icon" className={styles.icon} />
         <span>GitHub</span>
-      </a>
-      <a
-        href="/files/potocny-cv.pdf"
-        target="_blank"
-        className={styles.link}
-        onMouseEnter={() => setResumeIcon(resumeHover)}
-        onMouseLeave={() => setResumeIcon(resume)}
-      >
-        <Image src={resumeIcon} alt="File icon" className={styles.icon} />
-        <span>Resumé</span>
       </a>
     </motion.section>
   );
