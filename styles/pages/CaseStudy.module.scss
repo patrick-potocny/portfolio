@@ -28,10 +28,7 @@
     .thumbnail {
       width: 100%;
       height: auto;
-
-      &:hover {
-        z-index: 55;
-      }
+      z-index: 55;
     }
 
     .technologies {
@@ -48,9 +45,8 @@
         border-bottom: none;
       }
     }
-
   }
-  
+
   .links {
     font-size: 1.3em;
     display: flex;
@@ -124,10 +120,7 @@
 
     img {
       position: relative;
-
-      &:hover {
-        z-index: 55;
-      }
+      z-index: 55;
     }
 
     pre,

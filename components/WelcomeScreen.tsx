@@ -17,16 +17,16 @@ export default function WelcomeScreen({
   return (
     <>
       <div className={`${styles.terminal} ${vt323.className}`}>
-        <TypeAnimation sequence={[1000, "Hello there..."]} cursor={false} />
+        <TypeAnimation sequence={[300, "Hello there..."]} cursor={false} />
         <TypeAnimation
-          sequence={[2500, "I've been expecting You"]}
+          sequence={[1500, "I've been expecting You"]}
           cursor={false}
         />
         <TypeAnimation
           sequence={[
-            4700,
+            3300,
             () => setShowAccessGranted(true),
-            500,
+            200,
             () => setShowMatrixRain(true),
             2500,
             () => setSeenWelcomePage(true),

@@ -7,7 +7,7 @@ import boyComputer from "@/public/images/boyComputer.png";
 import boyReading from "@/public/images/boyReading.gif";
 import Link from "@/lib/link";
 import computer from "@/public/images/experience.png";
-import teamwork from "@/public/images/teamwork.png";
+import techBoy from "@/public/images/tech-boy.png";
 import AboutSection from "@/components/AboutSection";
 import SkillsRadar from "@/components/SkillsRadar";
 import AboutLinks from "@/components/AboutLinks";
@@ -34,17 +34,18 @@ export default function About() {
           <h1>Patrik Potocny</h1>
           <p>
             Front-end developer with 1+ year of experience in website and web
-            application development. I specialize in turning an idea into a
-            fully functional website or web application that provides an
-            exceptional user experience and is visually appealing.
+            application development focusing on React applications. I specialize
+            in turning an idea into a fully functional website or web
+            application that provides an exceptional user experience and is
+            visually appealing.
           </p>
           <p>
-            I am eager to continue expanding my skillset and work with talented
-            individuals to bring ideas to life. I am committed to delivering
-            top-quality code and exceptional user experiences.
+            I love learning and would like to continue doing so alongside
+            talented individuals. I am committed to delivering top-quality code
+            and exceptional user experiences.
           </p>
 
-          <p>Give me a problem and i'll give you a solution.</p>
+          <p>Give me a problem and I'll give you a solution.</p>
         </AboutSection>
 
         <AboutLinks />
@@ -52,7 +53,7 @@ export default function About() {
         <AboutSection imageUrl={computer} applyFilter>
           <h1>Experience</h1>
           <p>
-            During the past year, I have focused on translating designs into
+            During the past year, I have focused on translating ideas into
             fully-functional websites and web applications, with my latest
             project being:
           </p>
@@ -82,7 +83,7 @@ export default function About() {
         <AboutSection>
           <h1>Education</h1>
           <p>
-            <strong>GOOGLE UX DESIGN</strong> - course tought me the
+            <strong>GOOGLE UX DESIGN</strong> - course taught me the
             fundamentals of UX design, including research, prototyping, and
             testing, to create user-centered digital experiences -{" "}
             <a
@@ -98,31 +99,35 @@ export default function About() {
         <AboutSection imageUrl={boyReading} applyFilter>
           <h1>My Approach</h1>
           <p>
-            When it comes to problem-solving, I take a methodical and strategic
-            approach, breaking down complex issues into manageable steps and
-            leveraging my skills to provide the best possible solution.
+            When it comes to creating web applications, my approach is a
+            combination of creativity and problem-solving. I begin by analyzing
+            the needs and goals of the project, and then work to create a design
+            that meets those goals. During development, I take a methodical and
+            strategic approach, breaking down complex issues into smaller steps
+            and leveraging my skills to provide the best possible solution.
           </p>
           <p>
-            As a developer, I understand the importance of soft skills, and I
-            strive to demonstrate them in every work environment. Communication
-            is key to the success of any project and and I make sure it's clear
-            and concise. Finally, adaptability is essential in the fast-paced
-            world of front-end development, and I am always eager to learn and
-            grow, keeping up-to-date with the latest trends and technologies in
-            the field.
+            As a developer, I understand the importance of soft skills such as
+            communication and teamwork, and I strive to demonstrate them in
+            every work environment.
           </p>
         </AboutSection>
 
-        <AboutSection imageUrl={teamwork} applyFilter>
-          <h1>Goal</h1>
+        <AboutSection imageUrl={techBoy} applyFilter>
+          <h1>My Journey</h1>
           <p>
-            My ultimate goal is to become a lead developer in a team of talented
-            and like-minded individuals. I strive to be the driving force behind
-            successful projects and to take on a leadership role in creating
-            innovative solutions that push the boundaries of what is possible.
-            With my passion for learning and my eagerness to take on new
-            challenges, I am confident that I can achieve this goal and make a
-            positive impact on any team I am a part of.
+            I have had a lifelong interest in technology, starting from a young
+            age when I enjoyed building and tinkering with various gadgets and
+            machines. From building drones to constructing my own motorcycle, I
+            loved the challenge of solving complex problems and seeing my
+            creations come to life. It was through this love of building and
+            creating that I discovered my passion for programming and the
+            endless possibilities it offers for creating amazing projects.
+          </p>
+          <p>
+            My ultimate goal is to become a lead front-end developer and lead a
+            team of talented individuals, bringing my creativity and
+            problem-solving skills to projects that make a positive impact.
           </p>
         </AboutSection>
 

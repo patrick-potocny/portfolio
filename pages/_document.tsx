@@ -7,18 +7,18 @@ export default function Document() {
         <meta
           name="description"
           content="Hi, I'm Patrik,
-          experienced Front-End Developer with a passion for creating
+          Front-End Developer with a passion for creating
           visually pleasing websites and web applications, that deliver
           exceptional user experiences."
         />
 
         <meta name="theme-color" content="#05321e" />
 
-        <meta property="og:title" content="Experienced Front-End Developer" />
+        <meta property="og:title" content="Skilled Front-End Developer" />
         <meta
           property="og:description"
           content="Hi, I'm Patrik,
-          experienced Front-End Developer with a passion for creating
+          Front-End Developer with a passion for creating
           visually pleasing websites and web applications, that deliver
           exceptional user experiences."
         />
