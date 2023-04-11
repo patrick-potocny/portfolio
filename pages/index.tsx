@@ -1,12 +1,10 @@
 import WelcomeScreen from "@/components/WelcomeScreen";
 import React, { useContext, useState } from "react";
 import Head from "next/head";
-import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import Layout from "@/components/Layout";
 import { SeenWelcomeScreenCtx } from "@/context/SeenWelcomePageCtx";
 import styles from "@/styles/pages/Home.module.scss";
-import Link from "@/lib/link";
 import SkillsRadar from "@/components/SkillsRadar";
 import Typewriter from "@/components/Typewriter";
 import { glitchAnimation } from "@/lib/utils";
