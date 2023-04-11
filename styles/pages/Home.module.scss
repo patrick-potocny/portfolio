@@ -44,17 +44,6 @@
 
     .link {
       line-height: 1.6;
-
-      .linkBtn {
-        color: $clr-main;
-        border: 2px dashed $clr-main;
-        padding: 0.1em 0.3em;
-
-        @include btn-hover {
-          color: $clr-bg;
-          background-color: $clr-main;
-        }
-      }
     }
   }
 

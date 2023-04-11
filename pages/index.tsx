@@ -1,5 +1,7 @@
 import WelcomeScreen from "@/components/WelcomeScreen";
 import React, { useContext, useState } from "react";
+import Head from "next/head";
+import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import Layout from "@/components/Layout";
 import { SeenWelcomeScreenCtx } from "@/context/SeenWelcomePageCtx";
@@ -8,7 +10,7 @@ import Link from "@/lib/link";
 import SkillsRadar from "@/components/SkillsRadar";
 import Typewriter from "@/components/Typewriter";
 import { glitchAnimation } from "@/lib/utils";
-import Head from "next/head";
+import HomeLink from "@/components/HomeLink";
 
 // Shows the welcome screen only when user first visits the site or refreshes
 // the page. Otherwise, it shows the homepage.
@@ -95,20 +97,14 @@ export default function Home() {
                   transition={{ duration: 1, delay: 0.3 }}
                   className={styles.link}
                 >
-                  To back up my claims, here are my most recent{" "}
-                  <Link href="/projects" className={styles.linkBtn}>
-                    PROJECTS
-                  </Link>
+                  <HomeLink linkTo="/projects" text="CHECK OUT MY WORK"/>
                 </motion.p>
                 <motion.p
                   {...commonProps}
                   transition={{ duration: 1, delay: 0.7 }}
                   className={styles.link}
                 >
-                  Learn more{" "}
-                  <Link href="/about" className={styles.linkBtn}>
-                    ABOUT ME
-                  </Link>
+                  <HomeLink linkTo="/about" text="ABOUT ME"/>
                 </motion.p>
               </section>
               <motion.section
