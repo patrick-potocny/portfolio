@@ -45,7 +45,7 @@ export default function About() {
             and exceptional user experiences.
           </p>
 
-          <p>Give me a problem and I'll give you a solution.</p>
+          <p>Give me a problem and I'll give you a solution!</p>
         </AboutSection>
 
         <AboutLinks />
