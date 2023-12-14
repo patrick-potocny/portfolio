@@ -33,5 +33,13 @@
   "devDependencies": {
     "@types/react-copy-to-clipboard": "^5.0.4",
     "sass": "^1.58.3"
-  }
+  },
+  "description": "<a target=\"_blank\" href=\"https://www.patrikp.dev/\"> <img  src=\"https://user-images.githubusercontent.com/67468836/227938093-008cec62-71af-4827-b84e-7ba70dac917b.png\"  alt=\"Portfolio logo\" align=\"right\"  height=\"60\"  /> </a>",
+  "main": "next.config.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
