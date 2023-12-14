@@ -12,12 +12,19 @@
 
 ## Table of contents
 
-1. [Overview](#overview)
-2. [Technologies used](#technologies-used)
-3. [Goals](#goals)
-4. [Design](#design)
-5. [Development](#development)
-6. [Conclusion](#conclusion)
+- [Portfolio](#portfolio)
+  - [Table of contents](#table-of-contents)
+  - [Overview](#overview)
+    - [Technologies used](#technologies-used)
+  - [Goals](#goals)
+  - [Design](#design)
+  - [Development](#development)
+    - [Tech stack](#tech-stack)
+    - [Process](#process)
+    - [Challenges](#challenges)
+      - [**Typing effect:**](#typing-effect)
+      - [**Page transition animations:**](#page-transition-animations)
+  - [Conclusion](#conclusion)
 
 ---
 
@@ -25,7 +32,7 @@
 
 The portfolio website is a visually appealing and modern platform that showcases the skills and experience of the owner, with a focus on front-end development. The website offers a smooth and engaging user experience, allowing potential employers or clients to easily learn more about the owner and their capabilities. Each section of the website is designed to highlight the owner's strengths and expertise, with a visually appealing layout that helps to make a strong impression on visitors. Through this portfolio website, the owner is able to increase their visibility to potential employers and enhance their chances of getting hired by demonstrating their skills and experience in a clear and organized manner.
 
-![Screenshot from 2023-03-27 15-09-15](https://user-images.githubusercontent.com/67468836/227947516-9b5c112e-bc3b-4a93-97e3-592c8489d783.png)
+![Screenshot from 2023-03-27 15-09-15]()
 
 ### Technologies used
 
