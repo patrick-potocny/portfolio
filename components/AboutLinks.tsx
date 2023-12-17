@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "@/styles/components/AboutLinks.module.scss";
-import linkedIn from "@/public/images/linkedIn.svg";
+import linkedIn from "../public/images/linkedIn.svg";
 import linkedInHover from "@/public/images/linkedInHover.svg";
 import gitHub from "@/public/images/gitHub.svg";
 import gitHubHover from "@/public/images/gitHubHover.svg";
