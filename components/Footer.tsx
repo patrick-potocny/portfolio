@@ -26,7 +26,7 @@ export default function Footer() {
       <div className={styles.footerUnderline} />
       <footer className={styles.footer}>
         <a
-          href="https://www.linkedin.com/in/patrikpotocny"
+          href="https://www.linkedin.com/in/mutai-kipkoech/"
           target="_blank"
           className={styles.link}
           onMouseEnter={() => setLinkedInIcon(linkedInHover)}
@@ -40,7 +40,7 @@ export default function Footer() {
           <span>LinkedIn</span>
         </a>
         <a
-          href="https://github.com/patrick-potocny"
+          href="https://github.com/Mutai-Gilbert"
           target="_blank"
           className={styles.link}
           onMouseEnter={() => setGitHubIcon(gitHubHover)}
@@ -49,7 +49,7 @@ export default function Footer() {
           <Image src={gitHubIcon} alt="GitHub icon" className={styles.icon} />
           <span>GitHub</span>
         </a>
-        <CopyToClipboard text="patrik@patrikp.dev" onCopy={showCopied}>
+        <CopyToClipboard text="mutai@pkoech.dev" onCopy={showCopied}>
           <button
             className={styles.link}
           >
