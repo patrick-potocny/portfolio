@@ -44,104 +44,47 @@ function getMutatedStream(stream: string[]) {
 }
 
 function RainStream({ height }: { height: number }) {
-  const [stream, setStream] = useState<string[]>(getRandStream());
-  const [topPadding, setTopPadding] = useState(stream.length * -50);
-  const [intervalDelay, setIntervalDelay] = useState<null | number>(null);
-
-  // Initialize intervalDelay
-  useEffect(() => {
-    setTimeout(() => {
-      setIntervalDelay(getRandInRange(MIN_INTERVAL_DELAY, MAX_INTERVAL_DELAY));
-    }, getRandInRange(MIN_DELAY_BETWEEN_STREAMS, MAX_DELAY_BETWEEN_STREAMS));
-  }, []);
-
-  useInterval(() => {
-    if (!height) return;
-
-    // Remove stream if it's out of view
-    if (topPadding > height) setStream([]);
-
-    if (!intervalDelay) return;
-    setTopPadding(topPadding + 44);
-    setStream(getMutatedStream);
-  }, intervalDelay);
-
-  if (stream.length === 0) return null;
-
-  return (
-    <div
-      className={matrixFont.className}
-      style={{
-        color: "#1bff80",
-        writingMode: "vertical-rl",
-        textOrientation: "upright",
-        userSelect: "none",
-        whiteSpace: "nowrap",
-        marginTop: topPadding,
-        marginLeft: -20,
-        marginRight: -20,
-        textShadow: "0px 0px 8px rgba(32, 194, 14, 0.8)",
-        fontSize: 50,
-      }}
-    >
-      {stream.map((char, index) => (
-        <a
-          key={index}
-          style={{
-            marginTop: -12,
-            // Reduce opacity for last chars
-            opacity: index < 6 ? 0.1 + index * 0.15 : 1,
-            color: index === stream.length - 1 ? "#fff" : undefined,
-            textShadow:
-              index === stream.length - 1
-                ? "0px 0px 20px rgba(255, 255, 255, 1)"
-                : undefined,
-          }}
-        >
-          {char}
-        </a>
-      ))}
-    </div>
-  );
-}
+    const [stream, setStream] = useState<string[]>(getRandStream());
+    const [topPadding, setTopPadding] = useState(stream.length * -50);
+    const [intervalDelay, 
 
 export default function MatrixRain() {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [containerSize, setContainerSize] = useState<null | {
-    width: number;
-    height: number;
-  }>(null); // ?{width, height}
+        const containerRef = useRef<HTMLDivElement>(null);
+        const [containerSize, setContainerSize] = useState<null | {
+            width: number;
+            height: number;
+        }>(null); // ?{width, height}
 
-  useEffect(() => {
-    if (containerRef.current) {
-      const boundingClientRect = containerRef.current.getBoundingClientRect();
-      setContainerSize({
-        width: boundingClientRect.width,
-        height: boundingClientRect.height,
-      });
+        useEffect(() => {
+            if (containerRef.current) {
+                const boundingClientRect = containerRef.current.getBoundingClientRect();
+                setContainerSize({
+                    width: boundingClientRect.width,
+                    height: boundingClientRect.height,
+                });
+            }
+        }, []);
+
+        const streamCount = containerSize ? Math.floor(containerSize.width / 26) : 0;
+
+        return (
+            <div
+                style={{
+                    position: "fixed",
+                    top: 0,
+                    left: 0,
+                    bottom: 0,
+                    right: 0,
+                    overflow: "ignore",
+                    display: "flex",
+                    flexDirection: "row",
+                    justifyContent: "center",
+                }}
+                ref={containerRef}
+            >
+                {new Array(streamCount).fill(undefined).map((_, i) => (
+                    <RainStream height={containerSize?.height ?? 0} key={i} />
+                ))}
+            </div>
+        );
     }
-  }, []);
-
-  const streamCount = containerSize ? Math.floor(containerSize.width / 26) : 0;
-
-  return (
-    <div
-      style={{
-        position: "fixed",
-        top: 0,
-        left: 0,
-        bottom: 0,
-        right: 0,
-        overflow: "ignore",
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "center",
-      }}
-      ref={containerRef}
-    >
-      {new Array(streamCount).fill(undefined).map((_, i) => (
-        <RainStream height={containerSize?.height ?? 0} key={i} />
-      ))}
-    </div>
-  );
-}
