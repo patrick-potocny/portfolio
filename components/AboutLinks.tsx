@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "@/styles/components/AboutLinks.module.scss";
-import linkedIn from "@/public/images/linkedIn.svg";
+import linkedIn from "../public/images/linkedIn.svg";
 import linkedInHover from "@/public/images/linkedInHover.svg";
 import gitHub from "@/public/images/gitHub.svg";
 import gitHubHover from "@/public/images/gitHubHover.svg";
@@ -22,7 +22,7 @@ export default function AboutLinks() {
       className={styles.links}
     >
       <a
-        href="https://www.linkedin.com/in/patrikpotocny"
+        href="https://www.linkedin.com/in/mutai-kipkoech/"
         target="_blank"
         className={styles.link}
         onMouseEnter={() => setLinkedInIcon(linkedInHover)}
@@ -32,7 +32,7 @@ export default function AboutLinks() {
         <span>LinkedIn</span>
       </a>
       <a
-        href="https://github.com/patrick-potocny"
+        href="https://github.com/Mutai-Gilbert"
         target="_blank"
         className={styles.link}
         onMouseEnter={() => setGitHubIcon(gitHubHover)}
