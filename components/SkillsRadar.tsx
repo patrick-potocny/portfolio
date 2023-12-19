@@ -11,6 +11,8 @@ export default function SkillsRadar() {
         <li>CSS</li>
         <li>JAVASCRIPT</li>
         <li>TYPESCRIPT</li>
+        <li>Tailwind CSS</li>
+        <li>Bootstrap</li>
         <li>REACT</li>
         <li>GIT</li>
         <li>SCSS</li>
